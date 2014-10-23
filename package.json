@@ -10,10 +10,10 @@
     "express": "^4.9.7",
     "nodemailer": "^1.3.0",
     "mongoose": "^3.8.17",
-    "prompt": "^0.2.14"
+    "prompt": "^0.2.14",
+    "lodash": "^2.4.1"
   },
   "devDependencies": {},
-
   "repository": {
     "type": "git",
     "url": "https://github.com/posttool/ceearchitects.git"

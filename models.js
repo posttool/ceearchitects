@@ -1,6 +1,6 @@
-var mongoose = require("mongoose");
+var mongoose = require('mongoose');
 var ObjectId = mongoose.Schema.Types.ObjectId;
-var cms_models = require("../modules/cms/models");
+var CmsModels = require('../currentcms/lib/models');
 
 exports = module.exports = {
 
@@ -36,8 +36,7 @@ exports = module.exports = {
       {name: "title", widget: "input", options: {className: "large"}},
       {name: "url", widget: "input"},
       {name: "template", widget: "select", options: {options: [ 'Portfolio', 'LandingPage', 'InformationPage', 'Contact' ]}},
-       {name: "resources", cell: "image" },
-     {name: "resources", label: "images", widget: "upload", options: {type: "Resource", array: true}},
+      {name: "resources", label: "images", widget: "upload", options: {type: "Resource", array: true}},
       {name: "body", widget: "rich_text_cee", options: {collapsable: true, collapsed: false}},
       {name: "pages", widget: "choose_create", options: {type: "Page", array: true}},
     ],
@@ -46,8 +45,8 @@ exports = module.exports = {
   },
 
 
-  Resource:  cms_models.ResourceInfo(),
-  User: cms_models.UserInfo()
+  Resource:  CmsModels.ResourceInfo(),
+  User: CmsModels.UserInfo()
 
 }
 

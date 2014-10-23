@@ -3,8 +3,8 @@ var http = require("http");
 var url2 = "http://postera.com/PosteraTreeModule/FillSystemNode/.json?args=%5B3208952%5D";
 var bp = "http://postera.s3.amazonaws.com/";
 
-var current = require('../modules/cms');
-var utils = require('../modules/cms/utils');
+var current = require('../currentcms');
+  var utils = require('../currentcms/lib/utils');
 
 var cms = new current.Cms(require('./index'));
 var Page = cms.meta.model('Page');

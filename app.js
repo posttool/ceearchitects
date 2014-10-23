@@ -1,7 +1,7 @@
 var express = require('express');
 var nodemailer = require('nodemailer');
 var _ = require('lodash');
-var util = require('../modules/postera/util');
+var util = require('./util');
 
 
 // serve express app
@@ -11,9 +11,9 @@ exports = module.exports = function(config, meta) {
   app.set('views',__dirname + '/views');
   app.use(express.static(__dirname + '/public'));
   //app.use(favicon(__dirname + '/public/favicon.ico'));
-  app.use(express.urlencoded());
-  app.use(express.json());
-  app.use(express.compress());
+//  app.use(express.urlencoded());
+//  app.use(express.json());
+//  app.use(express.compress());
 
   var Page = meta.model('Page');
   //var News = meta.model('News');
